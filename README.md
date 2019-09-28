@@ -22,7 +22,7 @@ The Noken team!
 
 The least code you submit, the better.
 
-This doesn't mean your code should be in a single line – It means you should not implement you should **not implement features not required explicitely**.
+This doesn't mean your code should be in a single line – It means you should **not implement features not required explicitely**.
 
 Coding more than required will make you waste time, and will make us waste time. Please, don't.
 
