@@ -18,21 +18,23 @@ We sincerely thank you for your interest and your time.
 Best,
 The Noken team!
 
-## Submit the minimal posible
+## Submit the minimum posible
 
-The least code you submit, the better.
+- The least code you submit, the better.
+- This doesn't mean your code should be in a single line – It means you should **not implement features not required explicitely**.
+- Coding more than required will waste your time, and waste our time. Please, don't.
 
-This doesn't mean your code should be in a single line – It means you should **not implement features not required explicitely**.
+## Challenge: Create an API server/application
 
-Coding more than required will make you waste time, and will make us waste time. Please, don't.
-
-## Create a minimal server application
-
+- Write a server application that offers at least 3 endpoints:
+  - Define the game's known dictionary (see bellow).
+  - Start a new game by providing a board.
+  - Validate a play.
 - You can use any boilerplate or start project. If you need help with this, let us know and we will share a quick-starter project promptly.
 - Keep your code **separated from the boilerplate**, so it's easier to review your work.
 - We prefer TypeScript or typed JavaScript, or GoLang.
 
-### The game
+### Rules of the game
 
 - Each game has a board of 16 tiles (4x4):
   - Tiles have a single letter to each of them.
@@ -45,22 +47,22 @@ Coding more than required will make you waste time, and will make us waste time.
 
 ### API design
 
-Design an API to play, including:
+Design an API to play, including endpoints to allow:
 
 - Defining the app's dictionary.
-- Starting a game with a specific board distribution.
-- Validating a play on one of the ongoing games.
+- Starting a new game with a specific board distribution.
+- Validating a play on one of the games previously started.
 
-### Code
+### Implementing your code
 
-- Implement your API design.
+- Your app should satify the rules of the game and follow your API design.
 - You can use any type of persistance (app memory, in-memory database, database engine, etc).
 
 ### Testing
 
 - Describe your testing strategy.
-- Implement a single test as an example of your testing strategy.
-  - You can submit more tests only if required to demonstrate different aspects of your strategy.
+- Implement a **single** test as an example of your testing strategy.
+  - You can submit more tests if it is required to demonstrate different aspects of your strategy.
 
 ## Stretch goals
 
