@@ -1,6 +1,6 @@
 # Noken • Backend Interview • Letters game
 
-_Version 1.0_
+_Version 1.0.1_
 
 ## This is a coding challenge for applicants interested in joining Noken as Backend Engineers.
 
@@ -11,7 +11,7 @@ There is a Q&A and an example section at the end of the file, which may help you
 If you decide to continue with this process, **write us back WHEN** you expect to submit your solution before you begin implementing it.
 This is really important so we can better arrange to wait for you, specially if you want to take a little bit longer.
 
-If you decide NOT to continue with this process, let us know! ... So we don't keep sending your reminders.
+If you decide NOT to continue with this process, let us know! ... So we stop spamming you with reminders.
 
 We sincerely thank you for your interest and your time.
 
@@ -20,8 +20,7 @@ The Noken team!
 
 ## Submit the minimum posible
 
-- The least code you submit, the better.
-- This doesn't mean your code should be in a single line – It means you should **not implement features not required explicitely**.
+- You should **not implement features not required explicitely**.
 - Coding more than required will waste your time, and waste our time. Please, don't.
 
 ## Challenge: Create an API server/application
@@ -40,9 +39,9 @@ The Noken team!
   - Tiles have a single letter to each of them.
 - Players for a game can make a play by selecting a series of tiles to form words.
 - Plays are valid if the tiles satisfy all these conditions:
-  - Consecutive tiles are neighbors (including diagonals)
-  - Tiles can only be once in each play, but they can be used again in future plays
-  - The formed word is at least 3 letters
+  - Consecutive tiles are neighbors (including diagonals).
+  - Tiles can only be used once in each play, but they can be used again in future plays.
+  - The formed word is at least 3 letters.
   - The formed word is present in the app's dictionary.
 
 ### API design
@@ -56,6 +55,7 @@ Design an API to play, including endpoints to allow:
 ### Implementing your code
 
 - Your app should satify the rules of the game and follow your API design.
+- Your API routes should be documented (including parameters), implicitely (in code) or explicitely. 
 - You can use any type of persistance (app memory, in-memory database, database engine, etc).
 
 ### Testing
@@ -66,11 +66,11 @@ Design an API to play, including endpoints to allow:
 
 ## Stretch goals
 
-These are not required, but would make your submission stand out. You can implement none, one or all of these. If you do, let us know so we evaluate them.
+These are **not required**, but would make your submission stand out. You can implement none, one or all of these. If you do, let us know your decision so we evaluate them.
 
 - Allow specific players to make plays.
-- It will track which words were already played by a play, and won't allow the same player to submit the same word twice (even if it can be formed by sequences of different tiles).
-- Valid plays score 1, 2, 4, 8, etc points for words with 3, 4, 5, 6, etc letters.
+- It will track which words were already played by past plays, and won't allow the same player to submit the same word twice (even if it can be formed by sequences of different tiles).
+- Implement a new route to output the score: Valid plays score 1, 2, 4, 8, etc points for words with 3, 4, 5, 6, etc letters.
 
 #### Example
 
@@ -94,7 +94,7 @@ Then, a user submits the word "fab" formed by these tiles:
     M  N  O  P          M  N  O  P          M  N  O  P
 ```
 
-The server should accept the word.
+The server should accept the word. If you implement the score system (stretch goal), the score for this play is **1 point**.
 
 ---
 
@@ -123,11 +123,11 @@ Your deliverable should satisfy all these requirements:
 - Q: Can I use external libraries (npm)?
   - Of course you can!
   - However, if some functionality is very easy to implement, try to implement it yourself (i.e. Don't install a library to figure out if a number is odd/even).
-  - Choosing when and what libraries will speak about your judgement.
+  - Choosing *when* to use libraries and *what libraries* you imported will speak about your judgement.
 - Q: This coding challenge is too long. Is it OK if I implement it partially?
   - Although we recognize this exercise may take some time, it does measure if you have the skills we need to work at Noken.
   - Submitting an incomplete solution is acceptable, specially if you explain the reasons.
-  - However, a complete solution will increase the likelihood of being selected, and it will save time during our in-person interview.
+  - However, a complete solution will increase the likelihood of being selected to continue our process, and it will save time during our in-person interview.
 
 ---
 
@@ -152,6 +152,11 @@ When playing with the "neighbors rule", this board contains (at least) the follo
 - SOFT
 - SORT
 - START
+
+The following words cannot be formed in this board (because the tiles are not neighbors):
+- SOS (The letter S on the left can only be used ONCE)
+- TOLL (There's only ONE L)
+- TOTAL (No L is neighbor of an A)
 
 This board (obviously) does NOT include the following words from our [dictionary file](files/dictionary.json) (because there's neither D, E or U present in the board):
 
