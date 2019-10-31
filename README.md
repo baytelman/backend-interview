@@ -18,9 +18,9 @@ We sincerely thank you for your interest and your time.
 Best,
 The Noken team!
 
-## Submit the minimum posible
+## Submit the minimum possible
 
-- You should **not implement features not required explicitely**.
+- You should **not implement features not required explicitly**.
 - Coding more than required will waste your time, and waste our time. Please, don't.
 
 ## Challenge: Create an API server/application
@@ -55,8 +55,8 @@ Design an API to play, including endpoints to allow:
 ### Implementing your code
 
 - Your app should satify the rules of the game and follow your API design.
-- Your API routes should be documented (including parameters), implicitely (in code) or explicitely. 
-- You can use any type of persistance (app memory, in-memory database, database engine, etc).
+- Your API routes should be documented (including parameters), implicitly (in code) or explicitly. 
+- You can use any type of persistence (app memory, in-memory database, database engine, etc).
 
 ### Testing
 
@@ -126,7 +126,7 @@ Your deliverable should satisfy all these requirements:
   - Choosing *when* to use libraries and *what libraries* you imported will speak about your judgement.
 - Q: This coding challenge is too long. Is it OK if I implement it partially?
   - Although we recognize this exercise may take some time, it does measure if you have the skills we need to work at Noken.
-  - Submitting an incomplete solution is acceptable, specially if you explain the reasons.
+  - Submitting an incomplete solution is acceptable, especially if you explain the reasons.
   - However, a complete solution will increase the likelihood of being selected to continue our process, and it will save time during our in-person interview.
 
 ---
