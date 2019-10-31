@@ -26,7 +26,7 @@ The Noken team!
 ## Challenge: Create an API server/application
 
 - Write a server application that offers at least 3 endpoints:
-  - Define the game's known dictionary (see bellow).
+  - Define the game's known dictionary (see below).
   - Start a new game by providing a board.
   - Validate a play.
 - You can use any boilerplate or start project. If you need help with this, let us know and we will share a quick-starter project promptly.
