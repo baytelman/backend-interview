@@ -54,7 +54,7 @@ Design an API to play, including endpoints to allow:
 
 ### Implementing your code
 
-- Your app should satify the rules of the game and follow your API design.
+- Your app should satisfy the rules of the game and follow your API design.
 - Your API routes should be documented (including parameters), implicitly (in code) or explicitly. 
 - You can use any type of persistence (app memory, in-memory database, database engine, etc).
 
