@@ -1,8 +1,8 @@
-# Noken • Backend Interview • Letters game
+# Enara Health • Backend Interview • Letters game
 
-_Version 1.0.1_
+_Version 1.0.2_
 
-## This is a coding challenge for applicants interested in joining Noken as Backend Engineers.
+## This is a coding challenge for applicants interested in joining Enara Health as Backend Engineers.
 
 We ask you to _read this file carefully_ **before** you begin writing a solution.
 
@@ -16,7 +16,7 @@ If you decide NOT to continue with this process, let us know! ... So we stop spa
 We sincerely thank you for your interest and your time.
 
 Best,
-The Noken team!
+The Enara Health team!
 
 ## Submit the minimum posible
 
@@ -125,7 +125,7 @@ Your deliverable should satisfy all these requirements:
   - However, if some functionality is very easy to implement, try to implement it yourself (i.e. Don't install a library to figure out if a number is odd/even).
   - Choosing *when* to use libraries and *what libraries* you imported will speak about your judgement.
 - Q: This coding challenge is too long. Is it OK if I implement it partially?
-  - Although we recognize this exercise may take some time, it does measure if you have the skills we need to work at Noken.
+  - Although we recognize this exercise may take some time, it does measure if you have the skills we need to work together.
   - Submitting an incomplete solution is acceptable, specially if you explain the reasons.
   - However, a complete solution will increase the likelihood of being selected to continue our process, and it will save time during our in-person interview.
 
@@ -167,4 +167,4 @@ This board (obviously) does NOT include the following words from our [dictionary
 
 ## Thanks for your time!
 
-The Noken team!
+The Enara Health team!
