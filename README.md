@@ -1,6 +1,6 @@
 # Enara Health • Backend Interview • Letters game
 
-_Version 1.0.2_
+_Version 1.1.0_
 
 ## This is a coding challenge for applicants interested in joining Enara Health as Backend Engineers.
 
@@ -28,10 +28,10 @@ The Enara Health team!
 - Write a server application that offers at least 3 endpoints:
   - Define the game's known dictionary (see bellow).
   - Start a new game by providing a board.
-  - Validate a play.
+  - Validate a play within a board.
 - You can use any boilerplate or start project. If you need help with this, let us know and we will share a quick-starter project promptly.
 - Keep your code **separated from the boilerplate**, so it's easier to review your work.
-- We prefer TypeScript or typed JavaScript, or GoLang.
+- We prefer TypeScript or typed JavaScript, or Ruby on Rails.
 
 ### Rules of the game
 
@@ -64,17 +64,12 @@ Design an API to play, including endpoints to allow:
 - Implement a **single** test as an example of your testing strategy.
   - You can submit more tests if it is required to demonstrate different aspects of your strategy.
 
-## Stretch goals
-
-These are **not required**, but would make your submission stand out. You can implement none, one or all of these. If you do, let us know your decision so we evaluate them.
-
-- Allow specific players to make plays.
-- It will track which words were already played by past plays, and won't allow the same player to submit the same word twice (even if it can be formed by sequences of different tiles).
-- Implement a new route to output the score: Valid plays score 1, 2, 4, 8, etc points for words with 3, 4, 5, 6, etc letters.
-
 #### Example
 
 In the following example, the app is initialized with the dictionary defined in [this json dictionary file](files/dictionary.json).
+```
+CURL ... # There is a REST request to initialize the dictionary.
+```
 
 Then, a game is initialized with the board in the [test json file 1](files/test-board-1.json). If we would get to visualize the board, it would look like this:
 
@@ -83,6 +78,10 @@ Then, a game is initialized with the board in the [test json file 1](files/test-
     E  F  G  H
     I  J  K  L
     M  N  O  P
+```
+
+```
+CURL ... # There is a REST request to start a new game.
 ```
 
 Then, a user submits the word "fab" formed by these tiles:
@@ -94,7 +93,11 @@ Then, a user submits the word "fab" formed by these tiles:
     M  N  O  P          M  N  O  P          M  N  O  P
 ```
 
-The server should accept the word. If you implement the score system (stretch goal), the score for this play is **1 point**.
+The server should accept the word.
+
+```
+CURL ... # There is a REST request to check if the play described above is valid.
+```
 
 ---
 
@@ -106,14 +109,11 @@ Your deliverable should satisfy all these requirements:
 
 - It should include _instructions on how to run_ (installing dependencies, starting it, etc) and it shouldn't have any obscure environment requirements.
 
-- It should include _instructions on how to test_.
+- It should include _instructions on how to test_ (only **one test** is required).
 
 - Describe your endpoints, and how to use them.
 
-- It should be submitted using one of the following alternatives:
-  1. bitbucket.org or github.com repo (_Note: Do NOT clone our repo because other candidates can find it_).
-  1. Upload a compressed file somewhere and send us the URL.
-  1. Email us your code.
+- It should be submitted via bitbucket.org or github.com repo (_Note: Do NOT clone our repo because other candidates can find it_).
   - _Note: Do NOT include `node_modules` or any other files that will be auto-generated_.
 
 ---
