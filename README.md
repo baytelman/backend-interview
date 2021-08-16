@@ -68,7 +68,7 @@ Design an API to play, including endpoints to allow:
 
 In the following example, the app is initialized with the dictionary defined in [this json dictionary file](files/dictionary.json).
 ```
-CURL ... # There is a REST request to initialize the dictionary.
+curl ... # There is a REST request to initialize the dictionary.
 ```
 
 Then, a game is initialized with the board in the [test json file 1](files/test-board-1.json). If we would get to visualize the board, it would look like this:
@@ -81,7 +81,7 @@ Then, a game is initialized with the board in the [test json file 1](files/test-
 ```
 
 ```
-CURL ... # There is a REST request to start a new game.
+curl ... # There is a REST request to start a new game.
 ```
 
 Then, a user submits the word "fab" formed by these tiles:
@@ -96,7 +96,7 @@ Then, a user submits the word "fab" formed by these tiles:
 The server should accept the word.
 
 ```
-CURL ... # There is a REST request to check if the play described above is valid.
+curl ... # There is a REST request to check if the play described above is valid.
 ```
 
 ---
