@@ -1,4 +1,4 @@
-# Enara Health • Backend Interview • Letters game
+# Enara Health • Backend Interview • Time Tracker
 
 _Version 1.1.0_
 
@@ -25,36 +25,43 @@ The Enara Health team!
 
 ## Challenge: Create an API server/application
 
-- Write a server application that offers at least 3 endpoints:
-  - Define the game's known dictionary (see bellow).
-  - Start a new game by providing a board.
-  - Validate a play within a board.
+Write a REST-ful API that allows to start and stop a timer to track time spent in different projects.
+Each project has a unique text-based identifier (example `backend-interview`).
+
+The API should offer 2 endpoins for tracking:
+- Start the timer for project XYZ
+- Stop the timer for project XYZ
+
+The API should offer 2 endpoints for reporting:
+- All projects: Report the list of projects and total time for every project
+- **Extra goal**: One project: Report the total time and list the individual time segments for a project
+
+### Pay attention to details
+
+- The API should error with the corresponding code if the call is invalid (i.e. starting twice, ending twice, ending an unknown project).
+- Report should only consider closed segments (ignore if the current time segment has started but it hasn't ended).
+
+## Reporting output
+
+Your API should output JSON results.
+
+For all projects:
+- List each project with its total minutes spent
+
+**Extra goal**: For individual reports, you should include
+- Total minutes spent in the project
+- List of time segments (start-end) and minutes
+
+## Code
+
 - You can use any boilerplate or start project. If you need help with this, let us know and we will share a quick-starter project promptly.
 - Keep your code **separated from the boilerplate**, so it's easier to review your work.
 - We prefer TypeScript or typed JavaScript, or Ruby on Rails.
 
-### Rules of the game
-
-- Each game has a board of 16 tiles (4x4):
-  - Tiles have a single letter to each of them.
-- Players for a game can make a play by selecting a series of tiles to form words.
-- Plays are valid if the tiles satisfy all these conditions:
-  - Consecutive tiles are neighbors (including diagonals).
-  - Tiles can only be used once in each play, but they can be used again in future plays.
-  - The formed word is at least 3 letters.
-  - The formed word is present in the app's dictionary.
-
-### API design
-
-Design an API to play, including endpoints to allow:
-
-- Defining the app's dictionary.
-- Starting a new game with a specific board distribution.
-- Validating a play on one of the games previously started.
 
 ### Implementing your code
 
-- Your app should satify the rules of the game and follow your API design.
+- Your app should satify the requirements above and follow a well defined API design.
 - Your API routes should be documented (including parameters), implicitely (in code) or explicitely. 
 - You can use any type of persistance (app memory, in-memory database, database engine, etc).
 
@@ -66,37 +73,29 @@ Design an API to play, including endpoints to allow:
 
 #### Example
 
-In the following example, the app is initialized with the dictionary defined in [this json dictionary file](files/dictionary.json).
+In the following example, 2 projects are tracked:
 ```
-curl ... # There is a REST request to initialize the dictionary.
-```
+curl ... # Start  tracking for project abc.
+curl ... # End    tracking for project abc. (5 minutes later)
 
-Then, a game is initialized with the board in the [test json file 1](files/test-board-1.json). If we would get to visualize the board, it would look like this:
+curl ... # Start  tracking for project xyz.
+curl ... # End    tracking for project xyz. (15 minutes later)
 
-```
-    A  B  C  D
-    E  F  G  H
-    I  J  K  L
-    M  N  O  P
-```
+curl ... # Start  tracking for project abc.
+curl ... # End    tracking for project abc. (20 minutes later)
+  
+curl ... # List times for all projects:
+                - 2 projects:
+                    - abc ... 25m
+                    - xyz ... 15m
 
-```
-curl ... # There is a REST request to start a new game.
-```
+# ** Extra points **:
 
-Then, a user submits the word "fab" formed by these tiles:
-
-```
-    A  B  C  D         [A] B  C  D         [A][B] C  D
-    E [F] G  H          E [F] G  H          E [F] G  H
-    I  J  K  L          I  J  K  L          I  J  K  L
-    M  N  O  P          M  N  O  P          M  N  O  P
-```
-
-The server should accept the word.
-
-```
-curl ... # There is a REST request to check if the play described above is valid.
+curl ... # List times for project abc:
+# Should list:  - Total 25 minutes
+                - 2 segments:
+                    - ... 5m
+                    - ... 25m
 ```
 
 ---
@@ -128,42 +127,6 @@ Your deliverable should satisfy all these requirements:
   - Although we recognize this exercise may take some time, it does measure if you have the skills we need to work together.
   - Submitting an incomplete solution is acceptable, specially if you explain the reasons.
   - However, a complete solution will increase the likelihood of being selected to continue our process, and it will save time during our in-person interview.
-
----
-
-## Playing the Letters Game with our secondary file
-
-The [secondary board file](files/test-board-2.json) describes the following board:
-
-```
-L I S T
-O F A T
-S T R S
-O R A Y
-```
-
-When playing with the "neighbors rule", this board contains (at least) the following English words defined in [our (limited) dictionary file](files/dictionary.json).
-
-- ARTS
-- FAST
-- FIST
-- LIST
-- RATS
-- SOFT
-- SORT
-- START
-
-The following words cannot be formed in this board (because the tiles are not neighbors):
-- SOS (The letter S on the left can only be used ONCE)
-- TOLL (There's only ONE L)
-- TOTAL (No L is neighbor of an A)
-
-This board (obviously) does NOT include the following words from our [dictionary file](files/dictionary.json) (because there's neither D, E or U present in the board):
-
-- LOAD
-- LURE
-- RENT
-- STREET
 
 ## Thanks for your time!
 
