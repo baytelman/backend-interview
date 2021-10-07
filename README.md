@@ -110,7 +110,7 @@ Your deliverable should satisfy all these requirements:
 
 - Describe your endpoints, and how to use them.
 
-- It should be submitted via bitbucket.org or github.com repo (_Note: Do NOT clone our repo because other candidates can find it_).
+- It should be submitted via bitbucket.org or github.com repo (_Note: Do NOT fork our repo because other candidates can find it_).
   - _Note: Do NOT include `node_modules` or any other files that will be auto-generated_.
 
 ---
